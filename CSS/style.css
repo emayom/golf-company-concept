@@ -1,15 +1,26 @@
 @import url(reset.css);
+@import url(mode.css);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.dark-mode {
+    color: #FFFFFF;
+    background: linear-gradient(to bottom left, #121212 60%, #292929); 
+}
+
+.light-mode {
+    color: #121212;
+    background: linear-gradient(to bottom left, #F3F3F3 60%, #DBDBDB);
+}
 
 body {
     color: #FFFFFF;
     background: linear-gradient(to bottom left, #121212 60%, #292929);
-
+    width: fit-content;
 }
 
 header {
-    /* height: 100px; */
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid #4a4a4e;
 }
 
 nav {
@@ -35,9 +46,10 @@ ul {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
+
 
 /* main */
 main {
@@ -119,19 +131,31 @@ main {
 }
 
 #other-views div {
+    box-sizing: border-box;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 48px;
-    height: 48px;
-    border: 0;
+    width: 51px;
+    height: 51px;
+    /* border: 3px solid #fff; */
     border-radius: 50%;
     background: #FFF;
     margin: 18px 10px;
     opacity: 0.5;
 }
+
+#other-views div:hover {
+    opacity: 1;
+    box-sizing: border-box;
+    outline-offset: 3px;
+    outline:  black thick solid;
+    border-radius: 50%;
+    /* box-shadow: 0 0 3px 0 #f2ff00; */
+    
+}
+
 
 #other-views .active {
     opacity: 1;
@@ -175,34 +199,11 @@ main {
 #custominzation {
     display: flex;
     flex-direction: column;
-
-
-
-    opacity: 0.1;
-    background: #FFFFFF;
-    border-radius: 2px;
     font-family: Helvetica;
     font-size: 10px;
-    color: #FFFFFF;
+    color: #000000;
     letter-spacing: 0.33px;
     text-align: center;
-    opacity: 0.1;
-    border: 1px solid #FFFFFF;
-    border-radius: 2px;
-    opacity: 0.7;
-    font-family: Helvetica;
-    font-size: 10px;
-    color: #FFFFFF;
-    letter-spacing: 0.33px;
-    text-align: center;
-    font-family: Helvetica;
-    font-size: 12px;
-    color: #FFFFFF;
-    letter-spacing: 0.4px;
-    font-family: Helvetica;
-    font-size: 12px;
-    color: #FFFFFF;
-    letter-spacing: 0.4px;
 }
 
 
@@ -228,7 +229,7 @@ main {
 
 
 #option-3 button{
-    border: 1px solid #FFFFFF;
+    border: 1px solid #111;
     font-size: 10px;
     font-family: Helvetica;
     letter-spacing: 0.33px;
@@ -238,27 +239,91 @@ main {
 
 #option-4 {
     margin-bottom: 40px;
-    opacity: 0.1;
 }
 
 #option-4 button{
+    border: 1px solid #111;
     width: 300px;
     height: 50px;
 }
 
-#quentity {
-    opacity: 0.1;
-    background: #FFFFFF;
+#quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#number, #add {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    text-align: center;
     border: 0;
     border-radius: 2px;
+    border: 0;
 }
 
 #number {
     width: 90px;
     height: 50px;
+    margin-right: 10px;
 }
 
 #add {
     width: 200px;
     height: 50px;
+    background: #0083C2;
+    color: #FFFFFF;
+    font-family: DINCondensed-Bold;
+}
+
+/* quantity */
+input[type="number"] {
+  appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+
+/* setting */
+#setting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switch {
+    background-color: azure;
+    cursor: pointer;
+    width: 1.2em;
+    border-radius: 0.6em;
+    height: 3.2em;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    margin-right: 10px;
+}
+
+
+.options {
+    height: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+#opt-1, #opt-2 {
+    transition: .2s, all;
+}
+
+#opt-1 {
+    color: #4a4a4e;
+}
+
+#opt-2 {
+    color: #fff;
 }

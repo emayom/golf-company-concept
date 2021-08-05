@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body class="light-mode">
     <header>
         <nav>
             <h1 style="display: none;">TaylorMade</h1>
             <div id="logo">
-                <img src="img/Logo-dark.png" alt="TaylorMade">
+                <img id="logo-img" src="img/Logo-white.png" alt="TaylorMade">
             </div>
             <ul>
-                <li><a href="">CLUBS</a></li>
-                <li><a href="">GOLF BALLS</a></li>
-                <li><a href="">APPAREL</a></li>
-                <li><a href="">ACCESSORIES</a></li>
-                <li><a href="">CUSTOMIZATION</a></li>
+                <li><a class="nav" href="">CLUBS</a></li>
+                <li><a class="nav" href="">GOLF BALLS</a></li>
+                <li><a class="nav" href="">APPAREL</a></li>
+                <li><a class="nav" href="">ACCESSORIES</a></li>
+                <li><a class="nav" href="">CUSTOMIZATION</a></li>
             </ul>
-            <div id="mode">
-
+            <div id="setting">
+                <input type="checkbox" id="chk-box">
+                <label for="chk-box" id="chk">
+                    <span>선택</span>
+                </label>
             </div>
         </nav>
     </header>
@@ -96,12 +99,11 @@
             </div>
 
             <form id="quantity">
-                <input id="number" type="number" min="1">
+                <input id="number" type="number" min="1" max="99">
                 <button id="add">ADD TO CART</button>
             </form>
-
         </section>
     </main>
-    
+    <script type="text/javascript" src="switch.js"></script>
 </body>
 </html>
