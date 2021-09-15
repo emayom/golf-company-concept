@@ -19,7 +19,7 @@ function handleMode(){
     } else if (document.body.className === "dark-mode") {
         document.body.classList.add("light-mode");
         document.body.classList.remove("dark-mode");
-        logoImg.src = "/img/Logo-white.png";
+        logoImg.src = "https://emayom.github.io/golf-company-concept/img/Logo-dark.png";
 
         navs.forEach((el)=> el.classList.remove("dark-mode"));
     }
