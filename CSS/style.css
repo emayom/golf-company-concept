@@ -1,11 +1,24 @@
 @import url(reset.css);
 @import url(mode.css);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+:root {
+    --white: #FFF;
+    --black: #000;
+    --blue: #0083C2;
+}
 
 
 .dark-mode {
-    color: #FFFFFF;
+    color: var(--white);
     background: linear-gradient(to bottom left, #121212 60%, #292929); 
+}
+
+.dark-mode div button {
+    background-color: #121212;
+    border: 1px solid #4a4a4e !important;
+    color: #DBDBDB !important;
 }
 
 .light-mode {
@@ -14,24 +27,42 @@
 }
 
 body {
-    color: #FFFFFF;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 12px;
+    letter-spacing: 0.4px;
     background: linear-gradient(to bottom left, #121212 60%, #292929);
     width: fit-content;
 }
 
 header {
+    width: 100vw;
     border-bottom: 1px solid #4a4a4e;
+}
+
+button {
+    color: var(--black);
+    border: 1px solid #CCCCCC !important;
+    border-radius: 2px !important;
+    margin-right: 0 9px 9px;
+    font-size: 10px;
+    letter-spacing: 0.33px;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 nav {
     height: 100px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.nav:hover {
+    color: var(--blue);
 }
 
 ul {
@@ -149,8 +180,6 @@ main {
 #other-views div:hover {
     opacity: 1;
     box-sizing: border-box;
-    outline-offset: 3px;
-    outline:  black thick solid;
     border-radius: 50%;
     /* box-shadow: 0 0 3px 0 #f2ff00; */
     
@@ -199,24 +228,24 @@ main {
 #custominzation {
     display: flex;
     flex-direction: column;
-    font-family: Helvetica;
+    font-family: 'Open Sans', sans-serif;
     font-size: 10px;
+    letter-spacing: 0.33px;
+    line-height: 16px;
     color: #000000;
     letter-spacing: 0.33px;
     text-align: center;
 }
 
-
-
 #option-1, #option-2 {
-    width: 190px;
+    box-sizing: border-box;
     height: 72px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 #option-1 button, #option-2 button, #option-3 button {
-    width: 90px;
     height: 40px;
+    padding: 13px 31.4px;
 }
 
 #option-1 div, #option-2 div, #option-3 div, #option-4 div {
@@ -239,19 +268,46 @@ main {
 
 #option-4 {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 #option-4 button{
     border: 1px solid #111;
     width: 300px;
     height: 50px;
+    text-align: left !important;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 0 0 10px 0;
+}
+
+
+#option-4 button img {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    margin: 0px 15px 0px 14px;
 }
 
 #quantity {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
+
+#quantity button {
+    border: 0 !important;
+    padding: 0;
+    line-height: 0;
+}
+
+#quantity button:hover {
+    box-shadow: 0 0 25px 0 #0083C2;
+}
+
 
 #number, #add {
     font-size: 16px;
@@ -326,4 +382,9 @@ input::-webkit-inner-spin-button {
 
 #opt-2 {
     color: #fff;
+}
+
+/* test */
+.clicked {
+    background: rgba(255, 255, 255, 0.4) !important;
 }

@@ -15,11 +15,11 @@
                 <img id="logo-img" src="img/Logo-white.png" alt="TaylorMade">
             </div>
             <ul>
-                <li><a class="nav" href="">CLUBS</a></li>
-                <li><a class="nav" href="">GOLF BALLS</a></li>
-                <li><a class="nav" href="">APPAREL</a></li>
-                <li><a class="nav" href="">ACCESSORIES</a></li>
-                <li><a class="nav" href="">CUSTOMIZATION</a></li>
+                <li><a class="nav" href="#">CLUBS</a></li>
+                <li><a class="nav" href="#">GOLF BALLS</a></li>
+                <li><a class="nav" href="#">APPAREL</a></li>
+                <li><a class="nav" href="#">ACCESSORIES</a></li>
+                <li><a class="nav" href="#">CUSTOMIZATION</a></li>
             </ul>
             <div id="setting">
                 <input type="checkbox" id="chk-box">
@@ -64,46 +64,51 @@
             <div id="option-1">
                 Hand: <span id=""></span>
                 <div id="hands">
-                    <button>Left</button>
-                    <button>Right</button>
+                    <button class="hands">Left</button>
+                    <button class="hands">Right</button>
                 </div>
             </div>
 
             <div id="option-2">
                 Loft: <span id=""></span>
                 <div>
-                    <button>9.0</button>
-                    <button>10.5</button>
+                    <button class="lofts">9.0°</button>
+                    <button class="lofts">10.5°</button>
                 </div>
             </div>
 
             <div id="option-3">
                 Flex: <span id=""></span>
                 <div>
-                    <button>Regular</button>
-                    <button>Stiff</button>
-                    <button>X-Stiff</button>
+                    <button class="flex">Regular</button>
+                    <button class="flex">Stiff</button>
+                    <button class="flex">X-Stiff</button>
                 </div>
             </div>
 
             <div id="option-4">
                 Shaft: <span id=""></span>
                 <div>
-                    <button>
-                        <img src="" alt="">
+                    <button class="shafts">
+                        <img src="img/shaft-1.png" alt="">
+                        Mitsubishi Tensei AV Raw Blue<br>
+                        60 Graphite
                     </button>
-                    <button>
-                        <img src="" alt="">
+                    <button class="shafts">
+                        <img src="img/shaft-2.png"alt=""/>
+                        Project X HZRDUS Smoke RDXBlack<br>
+                        70 Graphite
                     </button>
                 </div>
             </div>
 
             <form id="quantity">
-                <input id="number" type="number" min="1" max="99">
+                <input id="number" type="number" min="1" max="99" value="1">
                 <button id="add">ADD TO CART</button>
             </form>
         </section>
     </main>
-    <script type="text/javascript" src="switch.js"></script>
+    <script type="text/javascript" src="js/switch.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
